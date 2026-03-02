@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Polyveil — Private Equity | Search Fund | Australia</title>
+  <meta name="description" content="Polyveil is a private equity search fund acquiring and accelerating quality small businesses in Australia. We bring capital, operational expertise, and a long-term owner's mindset to every acquisition." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #0F2240;
+      --navy-mid: #1A3860;
+      --grey:   #F7F7F5;
+      --text:   #1C1C1C;
+      --muted:  #6B7280;
+      --rule:   #E0E0DC;
+      --accent: #C9A84C;
+      --white:  #FFFFFF;
+      --max-w:  1100px;
+      --section-gap: 96px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ─────────────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 32px;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .nav-logo img { height: 52px; }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--navy);
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+
+    .nav-links a:hover { opacity: 1; }
+
+    /* ── HERO ────────────────────────────────────────────────── */
+    .hero {
+      padding: 160px 32px 120px;
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    .hero-eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(38px, 5.5vw, 68px);
+      font-weight: 700;
+      line-height: 1.12;
+      color: var(--navy);
+      max-width: 820px;
+      margin-bottom: 28px;
+    }
+
+    .hero-sub {
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--muted);
+      max-width: 580px;
+      line-height: 1.75;
+      margin-bottom: 44px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--white);
+      text-decoration: none;
+      padding: 15px 36px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-primary:hover {
+      background: var(--navy-mid);
+      transform: translateY(-1px);
+    }
+
+    /* ── DIVIDER ─────────────────────────────────────────────── */
+    .divider {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 32px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    /* ── SECTION BASE ────────────────────────────────────────── */
+    section {
+      padding: var(--section-gap) 32px;
+    }
+
+    .section-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .section-heading {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(28px, 3.5vw, 42px);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+
+    .section-intro {
+      font-size: 17px;
+      font-weight: 300;
+      color: var(--muted);
+      max-width: 640px;
+      line-height: 1.8;
+    }
+
+    /* ── WHAT WE DO ──────────────────────────────────────────── */
+    #about { background: var(--white); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      margin-top: 56px;
+      align-items: start;
+    }
+
+    .about-statement {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--navy);
+      border-left: 3px solid var(--accent);
+      padding-left: 24px;
+    }
+
+    .about-body p {
+      font-size: 15.5px;
+      line-height: 1.85;
+      color: #3D3D3D;
+      margin-bottom: 18px;
+    }
+
+    .about-body p:last-child { margin-bottom: 0; }
+
+    /* ── CRITERIA ────────────────────────────────────────────── */
+    #criteria { background: var(--grey); }
+
+    .criteria-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2px;
+      margin-top: 52px;
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      overflow: hidden;
+      background: var(--rule);
+    }
+
+    .criteria-card {
+      background: var(--white);
+      padding: 32px 28px;
+    }
+
+    .criteria-card-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .criteria-card-value {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+
+    .criteria-card-detail {
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .sectors-wrap {
+      margin-top: 52px;
+    }
+
+    .sectors-wrap h3 {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: var(--navy);
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+
+    .sector-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .sector-tag {
+      display: inline-block;
+      border: 1px solid var(--navy);
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: 500;
+      padding: 8px 20px;
+      border-radius: 2px;
+      letter-spacing: 0.04em;
+    }
+
+    .sector-tag.secondary {
+      border-color: var(--rule);
+      color: var(--muted);
+    }
+
+    /* ── TEAM ────────────────────────────────────────────────── */
+    #team { background: var(--white); }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      margin-top: 56px;
+    }
+
+    .team-card {}
+
+    .team-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .team-title {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 24px;
+    }
+
+    .team-rule {
+      width: 40px;
+      height: 2px;
+      background: var(--navy);
+      margin-bottom: 24px;
+    }
+
+    .team-bio {
+      font-size: 15px;
+      line-height: 1.85;
+      color: #3D3D3D;
+    }
+
+    .team-bio p { margin-bottom: 14px; }
+    .team-bio p:last-child { margin-bottom: 0; }
+
+    .team-highlights {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .highlight-chip {
+      font-size: 11.5px;
+      font-weight: 500;
+      color: var(--navy);
+      background: var(--grey);
+      padding: 5px 14px;
+      border-radius: 2px;
+      letter-spacing: 0.03em;
+    }
+
+    /* ── TRACK RECORD ────────────────────────────────────────── */
+    #track { background: var(--navy); color: var(--white); }
+
+    #track .section-label { color: var(--accent); }
+    #track .section-heading { color: var(--white); }
+    #track .section-intro { color: rgba(255,255,255,0.6); }
+
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px;
+      margin-top: 56px;
+      padding-top: 48px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .stat-block {}
+
+    .stat-number {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 52px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-number span {
+      color: var(--accent);
+    }
+
+    .stat-desc {
+      font-size: 14px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.6;
+      font-weight: 300;
+    }
+
+    .exits-timeline {
+      margin-top: 56px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .exit-item {
+      background: rgba(255,255,255,0.04);
+      padding: 32px 28px;
+    }
+
+    .exit-item:hover {
+      background: rgba(255,255,255,0.07);
+    }
+
+    .exit-co {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+
+    .exit-detail {
+      font-size: 13.5px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.6;
+    }
+
+    .exit-badge {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid rgba(201,168,76,0.4);
+      padding: 4px 12px;
+      border-radius: 2px;
+    }
+
+    /* ── AWARDS PHOTOS ───────────────────────────────────────── */
+    .awards-gallery {
+      /* Break out of section-inner to go full-bleed */
+      margin-top: 64px;
+      margin-left: calc(-50vw + 50%);
+      margin-right: calc(-50vw + 50%);
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2px;
+      overflow: hidden;
+    }
+
+    .award-photo {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+    }
+
+    /* Navy colour wash overlay sits on top of the image */
+    .award-photo::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 24, 52, 0.62);
+      mix-blend-mode: multiply;
+      pointer-events: none;
+      transition: opacity 0.5s;
+    }
+
+    .award-photo:hover::after {
+      opacity: 0.4;
+    }
+
+    .award-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      filter: grayscale(60%) brightness(0.75);
+      transform: scale(1.04);
+      transition: filter 0.6s, transform 0.7s;
+    }
+
+    .award-photo:hover img {
+      filter: grayscale(20%) brightness(0.9);
+      transform: scale(1.0);
+    }
+
+    .award-caption {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 28px 20px 18px;
+      background: linear-gradient(to top, rgba(10,20,36,0.75) 0%, transparent 100%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .award-caption-title {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(201,168,76,0.8);
+      margin-bottom: 2px;
+    }
+
+    .award-caption-detail {
+      font-size: 11px;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.4;
+      letter-spacing: 0.02em;
+    }
+
+    @media (max-width: 780px) {
+      .awards-gallery { grid-template-columns: 1fr; }
+      .award-photo { aspect-ratio: 16 / 9; }
+    }
+
+    /* ── CONTACT ─────────────────────────────────────────────── */
+    #contact { background: var(--grey); }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      margin-top: 52px;
+      align-items: start;
+    }
+
+    .contact-statement {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 21px;
+      font-weight: 400;
+      color: var(--navy);
+      line-height: 1.65;
+    }
+
+    .contact-body {
+      font-size: 15.5px;
+      color: #3D3D3D;
+      line-height: 1.8;
+      margin-top: 20px;
+    }
+
+    .contact-details { }
+
+    .contact-item {
+      margin-bottom: 32px;
+    }
+
+    .contact-item-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .contact-item-value {
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--navy);
+    }
+
+    .contact-item-value a {
+      color: var(--navy);
+      text-decoration: none;
+      border-bottom: 1px solid var(--accent);
+      padding-bottom: 2px;
+      transition: opacity 0.2s;
+    }
+
+    .contact-item-value a:hover { opacity: 0.7; }
+
+    /* ── FOOTER ──────────────────────────────────────────────── */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.45);
+      text-align: center;
+      padding: 36px 32px;
+      font-size: 13px;
+    }
+
+    footer a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+    }
+
+    /* ── RESPONSIVE ──────────────────────────────────────────── */
+    @media (max-width: 780px) {
+      .nav-links { display: none; }
+
+      .about-grid,
+      .team-grid,
+      .contact-layout { grid-template-columns: 1fr; gap: 40px; }
+
+      .exits-timeline { grid-template-columns: 1fr; }
+
+      .stats-row { grid-template-columns: 1fr; gap: 32px; }
+
+      .stat-number { font-size: 40px; }
+
+      .hero { padding: 120px 20px 80px; }
+
+      section { padding: 64px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAV ─────────────────────────────────────────────── -->
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="#">
+        <img src="logo.svg" alt="Polyveil" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#criteria">Criteria</a></li>
+        <li><a href="#track">Track Record</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── HERO ────────────────────────────────────────────── -->
+  <div class="hero">
+    <p class="hero-eyebrow">Private Equity · Search Fund · Australia</p>
+    <h1>Acquiring and accelerating quality Australian businesses.</h1>
+    <p class="hero-sub">
+      Polyveil is a private equity search fund backed by experienced operators and investors. We partner with business owners ready for their next chapter — bringing capital, deep operational expertise, and a long-term owner's mindset to every acquisition.
+    </p>
+    <a href="#contact" class="btn-primary">Get in Touch</a>
+  </div>
+
+  <div class="divider"><div></div></div>
+
+  <!-- ── ABOUT ────────────────────────────────────────────── -->
+  <section id="about">
+    <div class="section-inner">
+      <p class="section-label">What We Do</p>
+      <h2 class="section-heading">Operators who have done it before.</h2>
+      <p class="section-intro">We are not a passive investor. We are entrepreneurs and operators who have built, scaled, and exited businesses — and we bring that experience directly to the companies we acquire.</p>
+
+      <div class="about-grid">
+        <div>
+          <p class="about-statement">
+            "We look for great businesses that have strong foundations, loyal customers, and an owner ready to transition — then we invest in making them exceptional."
+          </p>
+        </div>
+        <div class="about-body">
+          <p>The search fund model puts an experienced operator at the helm from day one. Unlike traditional private equity, we take a concentrated, hands-on approach — acquiring one exceptional business at a time and dedicating ourselves fully to its growth.</p>
+          <p>We are actively searching for businesses in IT services, financial advisory, and estate management across Australia. We prize recurring or repeat revenue models, stable customer relationships, and businesses where technology adoption represents an untapped opportunity for value creation.</p>
+          <p>Our founders have collectively founded, scaled, and sold multiple businesses for eight-figure exits. We know what it takes to build — and we know what a great business looks like from the inside.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CRITERIA ──────────────────────────────────────────── -->
+  <section id="criteria">
+    <div class="section-inner">
+      <p class="section-label">Acquisition Criteria</p>
+      <h2 class="section-heading">What we're looking for.</h2>
+      <p class="section-intro">We have a clear view of our target profile. If your business broadly fits these parameters, we'd like to hear from you.</p>
+
+      <div class="criteria-grid">
+        <div class="criteria-card">
+          <p class="criteria-card-label">Annual Revenue</p>
+          <p class="criteria-card-value">$2M – $10M</p>
+          <p class="criteria-card-detail">Australian dollars. We are comfortable across this range and do not require a business to be at the upper end.</p>
+        </div>
+        <div class="criteria-card">
+          <p class="criteria-card-label">EBITDA</p>
+          <p class="criteria-card-value">$400K – $3M</p>
+          <p class="criteria-card-detail">We look for a healthy and sustainable margin, with room to improve through operational focus and technology adoption.</p>
+        </div>
+        <div class="criteria-card">
+          <p class="criteria-card-label">Business Model</p>
+          <p class="criteria-card-value">Recurring or Repeat</p>
+          <p class="criteria-card-detail">Service-based businesses with predictable, loyal customer bases. Contracted recurring revenue is preferred but not required.</p>
+        </div>
+        <div class="criteria-card">
+          <p class="criteria-card-label">Owner Profile</p>
+          <p class="criteria-card-value">Actively Working</p>
+          <p class="criteria-card-detail">The owner is central to the business today — we step into that role with commitment and capability, enabling a genuine transition.</p>
+        </div>
+        <div class="criteria-card">
+          <p class="criteria-card-label">Technology Maturity</p>
+          <p class="criteria-card-value">Medium-Low to Medium</p>
+          <p class="criteria-card-detail">We are drawn to businesses where digital tools and systems represent an upside — not a problem to manage.</p>
+        </div>
+        <div class="criteria-card">
+          <p class="criteria-card-label">Geography</p>
+          <p class="criteria-card-value">Australia-first</p>
+          <p class="criteria-card-detail">Our primary focus is the Australian market. We are open to considering select opportunities in New Zealand.</p>
+        </div>
+      </div>
+
+      <div class="sectors-wrap">
+        <h3>Target Sectors</h3>
+        <div class="sector-tags">
+          <span class="sector-tag">IT Services</span>
+          <span class="sector-tag">Financial Advisory</span>
+          <span class="sector-tag">Estate Management</span>
+          <span class="sector-tag secondary">Adjacent Opportunities Considered</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TRACK RECORD ──────────────────────────────────────── -->
+  <section id="track">
+    <div class="section-inner">
+      <p class="section-label">Track Record</p>
+      <h2 class="section-heading">A proven history of building and exiting.</h2>
+      <p class="section-intro">Our founders have not just raised capital — they have built companies from the ground up, navigated complex exits, and delivered exceptional returns to investors.</p>
+
+      <div class="stats-row">
+        <div class="stat-block">
+          <p class="stat-number"><span>3</span></p>
+          <p class="stat-desc">Companies founded, scaled, and successfully exited to global acquirers</p>
+        </div>
+        <div class="stat-block">
+          <p class="stat-number">~<span>20</span>x</p>
+          <p class="stat-desc">Investor return on the Hivint exit — in under four years</p>
+        </div>
+        <div class="stat-block">
+          <p class="stat-number"><span>25</span>+</p>
+          <p class="stat-desc">Years of combined experience at founder, CEO, and board level</p>
+        </div>
+      </div>
+
+      <div class="exits-timeline">
+        <div class="exit-item">
+          <p class="exit-co">SIFT</p>
+          <p class="exit-detail">Built by Craig Searle and Nick Ellsmore. Sold to Stratsec, establishing the partnership that would define both founders' trajectories in Australian cybersecurity.</p>
+          <span class="exit-badge">Scrip for Scrip</span>
+        </div>
+        <div class="exit-item">
+          <p class="exit-co">Stratsec</p>
+          <p class="exit-detail">Australia's leading cybersecurity firm, acquired by BAE Systems Australia in 2011. Nick Ellsmore served as a co-founder and senior leader through the exit.</p>
+          <span class="exit-badge">Acquired by BAE Systems, 2011</span>
+        </div>
+        <div class="exit-item">
+          <p class="exit-co">Hivint</p>
+          <p class="exit-detail">Co-founded by Craig Searle and Nick Ellsmore. Acquired by Trustwave in 2018 — delivering investors a ~20x return in under four years.</p>
+          <span class="exit-badge">~20x Return · Acquired by Trustwave, 2018</span>
+        </div>
+        <div class="exit-item">
+          <p class="exit-co">Post-Exit Leadership</p>
+          <p class="exit-detail">Following the Hivint acquisition, Nick joined Trustwave as SVP Worldwide Consulting & Professional Services — managing a USD$50M P&L and ~250 people across APAC, EMEA, and the Americas.</p>
+          <span class="exit-badge">$50M P&L · Global Leadership</span>
+        </div>
+      </div>
+
+    </div><!-- /section-inner -->
+
+    <!-- Awards photo gallery — full-bleed, sits outside inner container -->
+    <div class="awards-gallery">
+      <div class="award-photo">
+        <img src="TF50_Finalist_Hivint_sml.jpg" alt="Craig Searle and Nick Ellsmore, Deloitte Technology Fast 50, 2017" />
+        <div class="award-caption">
+          <p class="award-caption-title">Deloitte Technology Fast 50</p>
+          <p class="award-caption-detail">Hivint — 2017 Australia</p>
+        </div>
+      </div>
+      <div class="award-photo">
+        <img src="OAWN2523.JPG" alt="Craig Searle and Nick Ellsmore, Telstra Business Awards 2017, Victorian Business of the Year" />
+        <div class="award-caption">
+          <p class="award-caption-title">Telstra Business Awards</p>
+          <p class="award-caption-detail">Victorian Business of the Year — Hivint, 2017</p>
+        </div>
+      </div>
+      <div class="award-photo">
+        <img src="eb4e89a5-7a40-4a11-90e1-fef91b1a395f-original.jpeg" alt="Craig Searle and Nick Ellsmore, iAwards 2017, SecurityColony Infrastructure & Platform Innovation Finalist" />
+        <div class="award-caption">
+          <p class="award-caption-title">iAwards 2017</p>
+          <p class="award-caption-detail">SecurityColony — Infrastructure &amp; Platform Innovation Finalist</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ── TEAM ─────────────────────────────────────────────── -->
+  <section id="team">
+    <div class="section-inner">
+      <p class="section-label">The Team</p>
+      <h2 class="section-heading">Founders with runs on the board.</h2>
+      <p class="section-intro">Polyveil is led by two founders who have spent their careers building, leading, and selling technology businesses — and earning the trust of investors, boards, and acquirers along the way.</p>
+
+      <div class="team-grid">
+
+        <!-- Nick -->
+        <div class="team-card">
+          <h3 class="team-name">Nick Ellsmore</h3>
+          <p class="team-title">Founding Partner</p>
+          <div class="team-rule"></div>
+          <div class="team-bio">
+            <p>Nick has founded, built, and sold two of Australia's leading cybersecurity companies. Stratsec was acquired by BAE Systems Australia in 2011. Hivint, which Nick co-founded with Craig Searle, was acquired by Trustwave in 2018 — delivering investors a ~20x return in under four years.</p>
+            <p>Following the Hivint acquisition, Nick joined Trustwave as part of the global leadership team, ultimately serving as SVP, Worldwide Consulting &amp; Professional Services — a direct report to the CEO, managing a USD$50M P&amp;L and a team of approximately 250 people across APAC, EMEA, and the Americas.</p>
+            <p>Most recently Nick served as Partner and Head of Cyber at Mantel Group, Australia's largest privately held IT services business, again reporting directly to the CEO.</p>
+            <p>Over 25 years Nick has operated at every level of the governance stack — as a founder making board and investor decisions, as a CEO navigating acquisitions, and as an SVP inside a large global organisation. He holds a Graduate qualification from the Australian Institute of Company Directors (GAICD) and has served on the boards of the Internet Industry Association (Director &amp; Treasurer), UNSW advisory forums, Electronic Frontiers Australia (Vice Chair), and as an Australian delegate to the APEC Security &amp; Prosperity Steering Group.</p>
+          </div>
+          <div class="team-highlights">
+            <span class="highlight-chip">GAICD</span>
+            <span class="highlight-chip">USD$50M P&amp;L</span>
+            <span class="highlight-chip">BAE Systems Exit</span>
+            <span class="highlight-chip">Trustwave Exit</span>
+            <span class="highlight-chip">Mantel Group</span>
+          </div>
+        </div>
+
+        <!-- Craig -->
+        <div class="team-card">
+          <h3 class="team-name">Craig Searle</h3>
+          <p class="team-title">Founding Partner</p>
+          <div class="team-rule"></div>
+          <div class="team-bio">
+            <p>Craig Searle is one of Australia's most experienced cybersecurity professionals, with a career spanning two decades advising and leading complex programs for banking and financial services, critical infrastructure, ASX200 enterprises, and federal and state government.</p>
+            <p>Craig built SIFT with Nick Ellsmore — an early and formative step in both founders' journeys — before going on to co-found Hivint, which was acquired by Trustwave in 2018 in an eight-figure exit that returned investors approximately 20x in under four years.</p>
+            <p>Craig brings a rare combination of deep technical expertise and genuine business acumen. He has led engagements at the most complex and sensitive end of IT security — from inception and pre-sales through to delivery and closure — while building and managing high-performing teams across concurrent, high-stakes programs.</p>
+            <p>Known for his ability to translate technical risk into board-level language, Craig has been quoted across major industry and mainstream media including ITWorld, CSOOnline, ComputerWorld, and the Sun-Herald. He excels at working closely with business owners and stakeholders to understand what matters, and at building the operational rigour to deliver it.</p>
+          </div>
+          <div class="team-highlights">
+            <span class="highlight-chip">ASX200 Advisor</span>
+            <span class="highlight-chip">Critical Infrastructure</span>
+            <span class="highlight-chip">SIFT Co-Founder</span>
+            <span class="highlight-chip">Hivint Co-Founder</span>
+            <span class="highlight-chip">Eight-Figure Exit</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ───────────────────────────────────────────── -->
+  <section id="contact">
+    <div class="section-inner">
+      <p class="section-label">Get in Touch</p>
+      <h2 class="section-heading">We'd like to hear from you.</h2>
+
+      <div class="contact-layout">
+        <div>
+          <p class="contact-statement">
+            Whether you're a business owner considering your next chapter, an intermediary working with a potential target, or an investor interested in the Polyveil thesis — we welcome the conversation.
+          </p>
+          <p class="contact-body">
+            We are discreet, direct, and genuinely interested in finding the right fit. There is no formula here — if you have a business that broadly matches our profile, or know someone who might, reach out.
+          </p>
+        </div>
+        <div class="contact-details">
+          <div class="contact-item">
+            <p class="contact-item-label">Email</p>
+            <p class="contact-item-value"><a href="mailto:info@polyveil.com">info@polyveil.com</a></p>
+          </div>
+          <div class="contact-item">
+            <p class="contact-item-label">Location</p>
+            <p class="contact-item-value">Australia</p>
+          </div>
+          <div class="contact-item">
+            <p class="contact-item-label">Primary Focus</p>
+            <p class="contact-item-value">IT Services · Financial Advisory · Estate Management</p>
+          </div>
+          <a href="mailto:info@polyveil.com" class="btn-primary">Send us a message</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ────────────────────────────────────────────── -->
+  <footer>
+    <p>&copy; 2025 Polyveil Pty Ltd. All rights reserved. &nbsp;·&nbsp; <a href="mailto:info@polyveil.com">info@polyveil.com</a></p>
+  </footer>
+
+</body>
+</html>
